@@ -1,11 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <title>Site de Vendas</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+  <header>
+    <h1>Site de Vendas</h1>
+    <nav>
+    <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Produtos</a></li>
+        <li><a href="#">Carrinho</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <section class="secst">
+    <h2>Produtos em Destaque</h2>
+    <div class="product">
+      <img src="product1.jpg" alt="Produto 1">
+      <h3>Produto 1</h3>
+      <p>R$ 99,99</p>
+      <a href="#" class="btn">Comprar</a>
+    </div>
+
+    <div class="product">
+      <img src="product2.jpg" alt="Produto 2">
+      <h3>Produto 2</h3>
+      <p>R$ 49,99</p>
+      <a href="#" class="btn">Comprar</a>
+    </div>
+
+    <!-- Adicione mais produtos aqui -->
+
+  </section>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #bf9797;
+}
+
+/* Estilos do cabeçalho */
+header {
+  color: #fff;
+  padding: 30px;
+  text-align: center;
+}
+h1{
+    margin-top: 0;
+    margin-bottom: 30px;
+    background-color: #d2a511;
     
+
+}
+
+/* Estilos da navegação */
+nav ul {
+  list-style-type: none;
+  margin: 10;
+  padding: 0;
+  text-align: center;
+  
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+  text-align: center;
+}
+
+nav ul li a {
+  color: #d2a511;
+  text-decoration: none;
+  padding: 5px;
+  
+}
+
+/* Estilos da seção de produtos */
+section {
+  margin: 20px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.product {
+  display: inline-block;
+  text-align: center;
+  margin-right: 20px;
+}
+
+.product img {
+  width: 200px;
+}
+
+.product h3 {
+  margin-top: 10px;
+}
+
+.product p {
+  font-weight: bold;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background-color: #555;
+}
+
+/* Estilos do rodapé */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+  </style>
 </body>
 </html>
