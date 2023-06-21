@@ -3,4 +3,5 @@ class Produto{
         this.nome = nome;
         this.valor = valor;
     }
-}  
+}
+module.exports = Produto  

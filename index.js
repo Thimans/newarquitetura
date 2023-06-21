@@ -2,6 +2,7 @@ const exphbs = require('express-handlebars');
 const express = require('express')
 const app = express()
 const Pedido = require('./models/Pedido')
+const Produto = require('./models/Produto')
 
 app.use('/public', express.static(__dirname + '/public'))
 app.engine('hbs', exphbs.engine({extname: '.hbs'}));
