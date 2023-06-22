@@ -13,6 +13,4 @@ function carregaValor(){
     }else if(produto.value == "Monitor"){
         document.querySelector("#comprar").value = "R$ 1050,99";
     }
-    console.log(compra.value)
-
 };

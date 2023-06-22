@@ -11,26 +11,24 @@ app.use(express.urlencoded({extended: false}))
 
 app.get('/', async(req, res) => {
   var pedido = await Pedido.getPedido();
-  console.log(pedido);
-  
   res.render('index',{pedido});
 })
 
-app.post('/pedir',async function(req,res){
+app.get('/pedido', async(req, res) => {
+  var pedido = await Pedido.getPedido();
+  res.render('index',{
+    pedido : pedido,
+    layout : 'pedidos'});
+})
+
+app.post('/pedido',async function(req,res){
   const itemNome = req.body.itemNome
   const itemValor = req.body.itemValor
-  
-
-  console.log("Item Pedido: "+itemNome)
-  console.log("Item Valor: "+itemValor)
   if(itemNome != ""){
     const produto = new Produto(itemNome,itemValor)
     const pedido = new Pedido(produto)
-
-    console.log(pedido)
     pedido.save()
   }
-  
   var pedido = await Pedido.getPedido();
   res.render('index',{
     pedido : pedido

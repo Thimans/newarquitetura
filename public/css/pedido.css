@@ -1,0 +1,30 @@
+.containerMain{
+    display: none;
+}
+
+.containerPedidos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.containerPedidos h4{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.containerPedidos p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+h2{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.pedidos{
+    width: 400px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    padding-left: 5px;
+    text-align: center;
+    border-radius: 3px;
+}

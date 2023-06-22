@@ -5,21 +5,23 @@ class Pedido{
         this.itemPedido = itemPedido;
     }
     save(){
-        const user = conn.db().collection('pedido').insertOne({
+        const pedido = conn.db().collection('pedido').insertOne({
             itemPedido: this.itemPedido
             
         })
-        console.log("Pedido salvo")
-        return user;
+        return pedido;
 
     }
 
     static getPedido(){
-        const users = conn.db().collection('pedido').find().toArray()
-        console.log('Pedidos listados')
-        return users;
+        const pedido = conn.db().collection('pedido').find().toArray()
+        return pedido;
     }
     
+    static deletePedido(id){
+        const pedido = conn.db().collection('pedido').deleteOne(id)
+        return pedido;
+    }
 
 }
 module.exports = Pedido
